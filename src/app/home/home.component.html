@@ -1,0 +1,13 @@
+<div>
+    <mat-form-field>
+        <mat-label>Summoner Name</mat-label>
+        <input matInput placeholder="Faker" [(ngModel)]="SummonerToLook">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" class="button" (click)="onSearch()">Search</button>
+</div>
+<div>
+    Summoners:
+    <div *ngFor="let summoner of summonerList">
+        <div>{{summoner.name}} - {{summoner.summonerLevel}}</div>
+    </div>
+</div>

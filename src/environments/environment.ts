@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serverUrl: 'https://euw1.api.riotgames.com',
+  riotApiKey: 'RGAPI-4b1a9a76-f8a4-4b34-882f-5e9752a0229c',
 };
 
 /*
