@@ -6,4 +6,6 @@ export interface Summoner {
     id: string; // Encrypted summoner ID. Max length 63 characters.
     puuid: string; // Encrypted PUUID. Exact length of 78 characters.
     summonerLevel: number; // Summoner level associated with the summoner.
+
+    inGame: boolean;
 }

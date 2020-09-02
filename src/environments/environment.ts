@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   serverUrl: 'https://euw1.api.riotgames.com',
-  riotApiKey: 'RGAPI-4b1a9a76-f8a4-4b34-882f-5e9752a0229c',
+  riotApiKey: 'RGAPI-2a40cbf0-468f-4d80-b189-879e158e3f12',
 };
 
 /*

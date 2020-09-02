@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
-import { SummonerReducer } from '../app/summoner/summoner.reducer';
+import { SummonerReducer } from '../app/store/summoner/summoner.reducer';
 
 @NgModule({
   declarations: [

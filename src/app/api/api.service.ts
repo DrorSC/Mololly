@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpRequest, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 
 @Injectable({
@@ -20,20 +20,23 @@ export class ApiService {
   }
 
   getRequest(requestUrl): Observable<any> {
-    return this.httpClient
+    var response = this.httpClient
       .get(this.baseApiUrl + requestUrl, { headers: this.headers })
       .pipe(
         catchError(this.handleError)
       );
-
+    console.log({ url: this.baseApiUrl + requestUrl, headers: this.headers, response: response });
+    return response;
   }
 
   postRequest(requestUrl, body): Observable<any> {
-    return this.httpClient
+    var response = this.httpClient
       .post(this.baseApiUrl + requestUrl, body, { headers: this.headers })
       .pipe(
         catchError(this.handleError)
       );
+    console.log({ url: this.baseApiUrl + requestUrl, body: body, headers: this.headers, response: response });
+    return response;
   }
 
   private handleError(error: HttpErrorResponse) {
